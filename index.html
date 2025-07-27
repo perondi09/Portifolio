@@ -8,48 +8,83 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="./src/css/style.css">
+    <link rel="stylesheet" href="src/css/style.css">
 </head>
 
 <body>
 
-    <div id="game-world">
+    <div id="mundo-horizontal">
+        <div id="personagem">
+            <img src="src/img/peronsagem.gif" alt="Personagem">
+        </div>
 
-        <section id="apresentacao" class="cenario">
+        <section id="cenario-1" class="cenario">
             <div class="conteudo">
-                <h1>Olá, eu sou o Perondi</h1>
-                <p>Desenvolvedor fullstack. Se aventure no meu mundo!</p>
-                <p class="instrucao">Use as setas ◀ e ▶ para se mover.</p>
+                <h1>Guilherme Perondi</h1>
+                <h2>Engenheiro de Software</h2>
+
+                <div class="icones-tecnologia">
+                    <img src="./src/img/logoangular.png" alt="Angular" title="Angular">
+                    <img src="./src/img/csharplogo.png" alt="Csharp" title="Csharp">
+                    <img src="./src/img/sqllogo.png" alt="SQL Server" title="SQL Server">                    
+                </div>                
+
+                <p>Use as setas ⬅️ e ➡️ para se mover.</p>
             </div>
         </section>
 
-        <section id="projetos" class="cenario">
-            <div class="conteudo">
-                <h2>Meus Projetos</h2>
-                <ul id="projetoslist" class="projetosgrid">
-                </ul>
-            </div>
-        </section>
-
-        <section id="contato" class="cenario">
-            <div class="conteudo">
-                <h2>Contato</h2>
-                <p>Entre em contato</p>
-                <div class="contato">
-                    <a href="https://www.linkedin.com/in/guilherme-perondi/"><img src="./src/img/logolinkedin.png"></a>
-                    <a href="https://wa.me/5511932177405"><img src="./src/img/logowpp.png"></a>
-                    <a href="mailto:guilhermeperondi09@gmail.com"><img src="./src/img/logoemail.png"></a>
+        <section id="cenario-2" class="cenario">
+            <div class="conteudo-projetos">
+                <h2>Meus Feitos (Projetos)</h2>
+                <div class="carrossel-container">
+                    <button id="btn-prev-projeto" class="nav-btn">&lt;</button>
+                    <div id="projeto-display">
+                        <div id="projetos-filmstrip">
+                            <p>Carregando projetos...</p>
+                        </div>
+                    </div>
+                    <button id="btn-next-projeto" class="nav-btn">&gt;</button>
                 </div>
             </div>
         </section>
 
+        <section id="cenario-3" class="cenario">
+            <div class="conteudo">
+                <h2>Meus contatos</h2>
+                <ul class="lista-contato">
+                    <li>
+                        <a href="mailto:guilhermeperondi09@gmail.com">
+                            <img src="./src/img/logoemail.png" alt="Email">
+                            <span>Email</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/guilherme-perondi/" target="_blank">
+                            <img src="./src/img/logolinkedin.png" alt="LinkedIn">
+                            <span>LinkedIn</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/racionalVol1" target="_blank">
+                            <img src="./src/img/github-pixel.svg" alt="GitHub">
+                            <span>GitHub</span>
+                        </a>
+                    </li>
+                     <li>
+                        <a href="https://wa.me/5511987654321" target="_blank">
+                            <img src="./src/img/logowpp.png" alt="WhatsApp">
+                            <span>WhatsApp</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
     </div>
 
-    <div id="personagem"></div>
-
-    <script src="./src/js/main.js"></script>
-    <script src="./src/js/projetos.js"></script>
+    <script src="src/js/apiGithub.js"></script>
+    <script src="src/js/main.js"></script>
+    <script src="src/js/movmentoPersonagem.js"></script>
+    <script src="src/js/cenario.js"></script>
 </body>
 
 </html>
