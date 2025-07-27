@@ -23,8 +23,7 @@ function setupProjetos() {
                     const slideElement = document.createElement("div");
                     slideElement.className = "projeto-slide";
                     slideElement.innerHTML = `
-                        <h3>${projeto.name}</h3>
-                        <p>${projeto.description || "Este projeto não possui uma descrição."}</p>
+                        <h3>${projeto.name}</h3>                       
                         <a href="${projeto.html_url}" target="_blank">Ver no GitHub</a>
                     `;
                     filmstrip.appendChild(slideElement);
