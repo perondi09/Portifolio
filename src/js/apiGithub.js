@@ -11,7 +11,7 @@ function setupProjetos() {
         filmstrip.style.transform = `translateX(${novaPosicao}%)`;
     }
 
-    async function buscarProjetosGitHub() {       
+    async function buscarProjetosGitHub() {
         const url = 'https://api.github.com/users/racionalVol1/repos?sort=created&direction=desc';
         try {
             const response = await fetch(url);
@@ -23,7 +23,8 @@ function setupProjetos() {
                     const slideElement = document.createElement("div");
                     slideElement.className = "projeto-slide";
                     slideElement.innerHTML = `
-                        <h3>${projeto.name}</h3>                       
+                        <h3>${projeto.name}</h3>
+                        <p>${projeto.description || "Este projeto não possui uma descrição."}</p>                       
                         <a href="${projeto.html_url}" target="_blank">Ver no GitHub</a>
                     `;
                     filmstrip.appendChild(slideElement);
