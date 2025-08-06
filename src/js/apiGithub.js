@@ -12,7 +12,7 @@ function setupProjetos() {
     }
 
     async function buscarProjetosGitHub() {
-        const url = 'https://api.github.com/users/racionalVol1/repos?sort=created&direction=desc';
+        const url = 'https://api.github.com/users/perondi09/repos?sort=created&direction=desc';
         try {
             const response = await fetch(url);
             todosOsProjetos = await response.json();
